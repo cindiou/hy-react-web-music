@@ -24,7 +24,7 @@ export function getNewAlbum(limit, offset) {
 
 export function getTopList(id,limit=10) {
   return request({
-    url: "/top/list",
+    url: "/playlist/detail",
     params: {
       id,
       limit
