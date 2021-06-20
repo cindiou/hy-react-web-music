@@ -8,7 +8,7 @@ import { TopRankingWrapper } from './style';
 
 export default memo(function HYTopRanking(props) {
   // props and state
-  const { info } = props;
+  const { info={} } = props;
   const { tracks = [] } = info;
 
   // redux hooks
