@@ -14,7 +14,7 @@ import {
 
 export default memo(function HYNewAlbum(props) {
   // redux
-  const state = useSelector(state => ({
+  const {newAlbum=[]} = useSelector(state => ({
     newAlbum: state.getIn(["recommend", "newAlbum"])
   }), shallowEqual);
   const dispatch = useDispatch();
@@ -38,7 +38,7 @@ export default memo(function HYNewAlbum(props) {
                 return (
                   <div key={item} className="page">
                     {
-                      state.newAlbum.slice(item*5, (item+1)*5).map(item => {
+                      newAlbum.slice(item*5, (item+1)*5).map(item => {
                         return (
                           <HYAlbumCover key={item.id} info={item}/>
                         )
