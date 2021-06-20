@@ -22,11 +22,12 @@ export function getNewAlbum(limit, offset) {
   })
 }
 
-export function getTopList(idx) {
+export function getTopList(id,limit=10) {
   return request({
     url: "/top/list",
     params: {
-      idx
+      id,
+      limit
     }
   })
 }
